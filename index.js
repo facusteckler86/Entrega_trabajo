@@ -1,6 +1,6 @@
 // modelo de carrito de compra para panaderia
 
-class producto{
+class productos{
 
 constructor(pan de campo, medialunas, sanguches, precio, imagen){
 
@@ -16,22 +16,20 @@ let productos = prompt("Ingrese que producto desea");
 
 
 const productos1 = new productos (pan de campo: "pan de campo", precio : 300, imagen: imagen);
-console.log("productos1");
+console.log(prompt("productos1"));
+alert ("El producto ingresado es " + productos1);
 
 const productos2 = new productos (medialunas: "medialunas", precio : 600 , imagen: imagen);
-console.log("productos2");
+console.log(prompt("productos2"));
+alert ("El producto ingresado es " + productos2);
 
 const productos3 = new productos (sanguches: "sanguches", precio: 250, imagen: "imagen");
-console.log("productos3");
-
-
+console.log(prompt("productos3"));
+alert ("El producto ingresado es " + productos3);
 }
 
-}
+let productos = document.getElementsByClassName("productos");
 
-const productos ["pan de campo", "medialunas", "sanguches"];
-
-for (let index = 0; index < productos.length; index++) {
-    const element = productos[index];
-    
-}
+console.log(productos[0].innerHTML);
+console.log(productos[1].innerHTML);
+console.log(productos[2].innerHTML);
