@@ -34,20 +34,18 @@ function nuevoCliente () {
 
 //constructor de productos.
 
-constructor(pan de campo, medialunas, sanguches){
+const productos=[
+    
+{id: 1, nombre: "pan de campo",precio: 750},
+{id: 2, nombre: "medialunas",precio: 1500},
+{id: 3, nombre: "sanguches",precio: 350},
+{id: 4, nombre: "rosquitas",precio: 500},
+    
+];
 
-this.pan de campo = pan de campo;
-this.medialunas = medialunas;
-this.sanguches = sanguches;
-this.precio = precio;
-
-}
 //consulto que producto de los 3 en tienda on-line quiere, mediante un prompt
 
 let productos = prompt("Ingrese que producto desea");
-
-//mantuve esta forma para poder crear a los productos, en vez de usar id
-
 
 //pan de campo
 
