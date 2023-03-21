@@ -1,4 +1,6 @@
-// modelo de carrito de compra para panaderia
+// modelo de carrito de compra para panaderia.
+
+//acceso usuario.
 
 let usuario = prompt("Hola, Bienvenido, indique su usuario");
 
@@ -43,6 +45,14 @@ const productos=[
   {id: 4, nombre: "rosquitas",precio: 500},
       
   ];
+
+  let contenedor = document.getElementsByClassName("contenedor");
+
+  
+  for(const producto of productos){
+    console.log(producto.innerHTML);
+  }
+  
   
   boton.addEventListener("click", () => {
       Swal.fire({
