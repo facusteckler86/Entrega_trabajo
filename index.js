@@ -1,7 +1,5 @@
 // modelo de carrito de compra para panaderia
 
-//saludo inicial.
-
 let usuario = prompt("Hola, Bienvenido, indique su usuario");
 
 let formulario = document.getElementById("Formulario");
@@ -35,19 +33,32 @@ formulario.addEventListener("submit", (e) => {
         usuario.push(objeto);
         localStorage.setItem("usuario", JSON.stringify(usuario));
         
-    });    
-    
-//constructor de productos.
+        //constructor de productos.
 
 const productos=[
     
-{id: 1, nombre: "pan de campo",precio: 750},
-{id: 2, nombre: "medialunas",precio: 1500},
-{id: 3, nombre: "sanguches",precio: 350},
-{id: 4, nombre: "rosquitas",precio: 500},
-    
-];
+  {id: 1, nombre: "pan de campo",precio: 750},
+  {id: 2, nombre: "medialunas",precio: 1500},
+  {id: 3, nombre: "sanguches",precio: 350},
+  {id: 4, nombre: "rosquitas",precio: 500},
+      
+  ];
+  
+  boton.addEventListener("click", () => {
+      Swal.fire({
+        title: "Agregue el producto",
+        input: "text",
+        showCancelButton: true,
+        confirmButtonText: "Look up",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: `${result.value}`,
+          });
+        }
+      });
+    });
 
-//consulto que producto de los 3 en tienda on-line quiere, mediante un prompt
 
-let consulta = prompt("Ingrese que producto desea");
+
+    });    
