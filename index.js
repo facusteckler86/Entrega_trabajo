@@ -1,13 +1,10 @@
-// modelo de carrito de compra para panaderia.
-
-//acceso usuario.
+// modelo de carrito de compra para panaderia
 
 let usuario = prompt("Hola, Bienvenido, indique su usuario");
 
-let formulario = document.getElementById("Formulario");
-e.preventDefault();
-
 formulario.addEventListener("submit", (e) => {
+        let formulario = document.getElementById("Formulario");
+        e.preventDefault();
 
         let inputs = e.target.children;
         let nombre = inputs[0].value;
@@ -23,17 +20,17 @@ formulario.addEventListener("submit", (e) => {
 
         
         let usuarioStorage = localStorage.getItem("usuario");
-        let usuario;
+        let usuarioGuardado;
 
-        if (usuario) {
+        if (usuarioStorage) {
             usuario = JSON.parse(usuarioStorage);
             
         } else{
-            usuario [];
+            usuarioGuardado = [];
         }
 
-        usuario.push(objeto);
-        localStorage.setItem("usuario", JSON.stringify(usuario));
+        usuarioGuardado.push(objeto);
+        localStorage.setItem("usuario", JSON.stringify(usuarioGuardado));
         
         //constructor de productos.
 
@@ -46,13 +43,8 @@ const productos=[
       
   ];
 
-  let contenedor = document.getElementsByClassName("contenedor");
+  let boton = document.getElementById("boton");
 
-  
-  for(const producto of productos){
-    console.log(producto.innerHTML);
-  }
-  
   
   boton.addEventListener("click", () => {
       Swal.fire({
@@ -63,12 +55,11 @@ const productos=[
       }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire({
-            title: `${result.value}`,
+            title: result.value,
           });
         }
       });
     });
 
 
-
-    });    
+    });   
