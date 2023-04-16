@@ -38,7 +38,7 @@ const productos=[
   {id: 2, nombre: "medialunas",precio: 1500},
   {id: 3, nombre: "sanguches",precio: 350},
   {id: 4, nombre: "rosquitas",precio: 500},
-      
+  {id: 5, nombre: "torta de chocolate",precio: 5000}
   ];
 
   let boton = document.getElementById("boton");
