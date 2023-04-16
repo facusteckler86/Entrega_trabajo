@@ -6,4 +6,7 @@
 
 .main{
     background-color:azure;
+    display: flex;
+    justify content: center;
+    aligh-content: center;
 }

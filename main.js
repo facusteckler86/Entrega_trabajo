@@ -62,6 +62,25 @@ const productos=[
       });
     });
 
+    boton.addEventListener("click",() => {
+      Swal.fire({
+        title: "Esta seguro de eliminar el producto?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Si,estoy segur@",
+        cancelButtonText: "No, me arrepenti",
+      }).then((result)=> {
+        if(result.isConfirmed){
+          Swal.fire({
+            title:"Borrado!!",
+            icon: "success",
+            text: "El producto ha sido borrado",
+          });
+        }
+
+      });
+    });
+
 
 <<<<<<< HEAD:main.js
     }); 
