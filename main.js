@@ -42,10 +42,9 @@ const productos=[
   ];
 
   let boton = document.getElementById("boton");
-<<<<<<< HEAD:main.js
-=======
 
->>>>>>> c3bdd3292ada7a1a36f40f1fc45f5fc4aaecd850:index.js
+
+// Botones para agregar productos al carrito, y tambien para consultar si se eliminan o no.
   
   boton.addEventListener("click", () => {
       Swal.fire({
@@ -81,9 +80,4 @@ const productos=[
       });
     });
 
-
-<<<<<<< HEAD:main.js
-    }); 
-=======
-    });   
->>>>>>> c3bdd3292ada7a1a36f40f1fc45f5fc4aaecd850:index.js
+    
