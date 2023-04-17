@@ -13,7 +13,7 @@
 			<h1>Panaderia Doña Pepa.</h1>
 
 			<div class="container-icon">
-				<svg
+				<svg>
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="0 0 24 24"
@@ -25,18 +25,21 @@
 						stroke-linecap="round"
 						stroke-linejoin="round"
 						d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-					/>
+			/>
 				</svg>
 				<div class="count-products">
 					<span id="contador-productos">0</span>
 				</div>
-
+			
+				<!-- icono del carrito. -->
+				
 				<div class="container-cart-products hidden-cart">
+					<div class="row-product">
 					<div class="cart-product">
 						<div class="info-cart-product">
                             <span class="cantidad-producto-carrito">1</span>
-                            <p class="titulo-producto-carrito">Zapatos Nike</p>
-                            <span class="precio-producto-carrito">$80</span>
+                            <p class="titulo-producto-carrito">Pan de Campo</p>
+                            <span class="precio-producto-carrito">$ 750</span>
                         </div>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -53,13 +56,17 @@
 							/>
 						</svg>
 					</div>
+				</div>
                     <div class="cart-total">
                         <h3>Total:</h3>
-                        <span class="total-pagar">$200</span>
+                        <span class="total-pagar">$ 750</span>
                     </div>
 				</div>
-			</div>
+			
 		</header>
+
+		<!-- productos en stock. -->
+
 		<div class="container-items">
 			<div class="item">
 				<figure>
@@ -71,7 +78,7 @@
 				<div class="info-product">
 					<h2>Pan de Campo</h2>
 					<p class="price">$ 750</p>
-					<button>Añadir al carrito</button>
+					<button class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 			<div class="item">
@@ -84,7 +91,7 @@
 				<div class="info-product">
 					<h2>Mendialunas</h2>
 					<p class="price">$ 1500</p>
-					<button>Añadir al carrito</button>
+					<button class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 			<div class="item">
@@ -97,7 +104,7 @@
 				<div class="info-product">
 					<h2>Sandwich</h2>
 					<p class="price">$ 350</p>
-					<button>Añadir al carrito</button>
+					<button class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 			<div class="item">
@@ -110,7 +117,7 @@
 				<div class="info-product">
 					<h2>Rosquitas</h2>
 					<p class="price">$ 500</p>
-					<button>Añadir al carrito</button>
+					<button class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 			<div class="item">
@@ -123,7 +130,7 @@
 				<div class="info-product">
 					<h2>Torta de Chocolate</h2>
 					<p class="price">$ 5000</p>
-					<button>Añadir al carrito</button>
+					<button class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 		</div>

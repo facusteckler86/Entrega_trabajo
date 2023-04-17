@@ -1,45 +1,142 @@
 // modelo de carrito de compra para panaderia
 
-let usuario = prompt("Hola, Bienvenido, indique su usuario");
+const btnCart = document.querySelector('.container-icon')
+const containerCartProducts = document.querySelector('.container-cart-products')
 
-formulario.addEventListener("submit", (e) => {
-        let formulario = document.getElementById("Formulario");
-        e.preventDefault();
+btnCart.addEventListener('click', () => {
+    containerCartProducts.classList.toggle('hidden-cart')
+})
 
-        let inputs = e.target.children;
-        let nombre = inputs[0].value;
-        let domicilio = inputs[1].value;
-        let telefono = inputs[2];
-        
-        let objeto = {
-            nombre,
-            domicilio,
-            telefono,
-        };
-        
-        let usuarioStorage = localStorage.getItem("usuario");
-        let usuarioGuardado;
+const cartInfo = document.querySelector(".cart-product")
+const rowProduct = document.querySelector(".row-product")
 
-        if (usuarioStorage) {
-            usuario = JSON.parse(usuarioStorage);
-            
-        } else{
-            usuarioGuardado = [];
-        }
+// listado de productos
 
-        usuarioGuardado.push(objeto);
-        localStorage.setItem("usuario", JSON.stringify(usuarioGuardado));
-        
-        //constructor de productos.
+const productsList = document.querySelector(`.container-items`)
 
-const productos=[
-    
+let allProducts = [
   {id: 1, nombre: "pan de campo",precio: 750},
   {id: 2, nombre: "medialunas",precio: 1500},
   {id: 3, nombre: "sanguches",precio: 350},
   {id: 4, nombre: "rosquitas",precio: 500},
   {id: 5, nombre: "torta de chocolate",precio: 5000}
-  ];
+
+]
+
+productsList.addEventListener("click", e => {
+
+  
+  if (e.target.classList.contains("btn-add-cart")){
+      const product = e.target.parentElement;
+      const infoProduct = {
+        quantity: 1,
+        title: product.querySelector("h2").textContent,
+        price: product.querySelector("p").textContent,
+      }
+      console.log(infoProduct);
+      const salida = allProducts.some(product => product.title === infoProduct.title)
+
+      if (salida) {
+        
+        const product = allProducts.map(product =>{
+          if (product.title === infoProduct.title) {
+            product.quantity++;
+            return product
+            
+          } else{ 
+            return product}
+           })
+      }
+      allProducts = [...allProducts, infoProduct]
+      showHTML();
+    }
+    console.log(allProducts);    
+
+})
+
+
+const showHTML = () =>{
+  
+  allProducts.forEach(product =>{
+    const containerProduct = document.createElement("div")
+    containerProduct.classList.add("cart-product")
+
+    containerProduct.innerHTML = `
+      <span class="cantidad-producto-carrito">${product.quantity}</span>
+      <p class="titulo-producto-carrito">${product.title}</p>
+      <span class="precio-producto-carrito">${product.price}</span>
+    </div>
+    
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  class="icon-close"
+>
+<path
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  d="M6 18L18 6M6 6l12 12"
+/>
+</svg>
+    
+    `
+    rowProduct.append(containerProduct)
+
+  })
+
+
+}
+
+
+
+
+
+
+
+
+// let usuario = prompt("Hola, Bienvenido, indique su usuario");
+
+// formulario.addEventListener("submit", (e) => {
+//         let formulario = document.getElementById("Formulario");
+//         e.preventDefault();
+
+//         let inputs = e.target.children;
+//         let nombre = inputs[0].value;
+//         let domicilio = inputs[1].value;
+//         let telefono = inputs[2];
+        
+//         let objeto = {
+//             nombre,
+//             domicilio,
+//             telefono,
+//         };
+        
+//         let usuarioStorage = localStorage.getItem("usuario");
+//         let usuarioGuardado;
+
+//         if (usuarioStorage) {
+//             usuario = JSON.parse(usuarioStorage);
+            
+//         } else{
+//             usuarioGuardado = [];
+//         }
+
+//         usuarioGuardado.push(objeto);
+//         localStorage.setItem("usuario", JSON.stringify(usuarioGuardado));
+        
+        //constructor de productos.
+
+// const productos=[
+    
+//   {id: 1, nombre: "pan de campo",precio: 750},
+//   {id: 2, nombre: "medialunas",precio: 1500},
+//   {id: 3, nombre: "sanguches",precio: 350},
+//   {id: 4, nombre: "rosquitas",precio: 500},
+//   {id: 5, nombre: "torta de chocolate",precio: 5000}
+//   ];
 
   let boton = document.getElementById("boton");
 
