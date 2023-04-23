@@ -1,0 +1,13 @@
+[
+{"producto":"pan de campo","precio":750,"stock":100,"imagen":"./assets/img/pan_de_campo.jpg" },
+{"producto":"medialunas","precio":1500 ,"stock":50 ,"imagen":"./assets/img/medialunas" },
+{"producto":"sanguches","precio":350 ,"stock":100 ,"imagen":"./assets/img/sandwich" },
+{"producto":"rosquitas","precio":500 ,"stock":150 ,"imagen":"./assets/img/donuts" },
+{"producto":"torta de chocolate","precio":5000,"stock":2 ,"imagen":"./assets/img/torta" }
+
+
+
+
+
+    
+]
