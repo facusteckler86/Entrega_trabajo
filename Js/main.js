@@ -14,14 +14,14 @@ const rowProduct = document.querySelector(".row-product")
 
 const productsList = document.querySelector(`.container-items`)
 
-let allProducts = [
-  {id: 1, nombre: "pan de campo",precio: 750},
-  {id: 2, nombre: "medialunas",precio: 1500},
-  {id: 3, nombre: "sanguches",precio: 350},
-  {id: 4, nombre: "rosquitas",precio: 500},
-  {id: 5, nombre: "torta de chocolate",precio: 5000}
+// let allProducts = [
+//   {id: 1, nombre: "pan de campo",precio: 750},
+//   {id: 2, nombre: "medialunas",precio: 1500},
+//   {id: 3, nombre: "sanguches",precio: 350},
+//   {id: 4, nombre: "rosquitas",precio: 500},
+//   {id: 5, nombre: "torta de chocolate",precio: 5000}
 
-]
+// ]
 
 productsList.addEventListener("click", e => {
 
